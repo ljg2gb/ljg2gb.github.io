@@ -94,8 +94,9 @@
         padding-top: 52px;
         border-top: 1px solid var(--line);
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 320px 1fr;
         gap: 56px;
+        align-items: start;
       }
       .cv h2 {
         font-size: 0.78rem;
@@ -103,15 +104,43 @@
         text-transform: uppercase;
         color: var(--muted);
         font-weight: 600;
-        margin: 0 0 26px;
+        margin: 0;
+        padding-top: 4px;
       }
-      .entry { margin-bottom: 26px; }
-      .entry:last-child { margin-bottom: 0; }
-      .entry .title { font-weight: 600; margin: 0; }
-      .entry .org { margin: 1px 0 0; }
-      .entry .meta { color: var(--muted); font-size: 0.9rem; margin: 3px 0 0; }
-      .entry .note { color: var(--muted); font-size: 0.9rem; margin: 5px 0 0; }
-      .cv h2.later { margin-top: 44px; }
+      .timeline {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 0 30px;
+        position: relative;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        bottom: 8px;
+        width: 2px;
+        background: var(--line);
+      }
+      .tl-item { position: relative; padding-bottom: 30px; }
+      .tl-item:last-child { padding-bottom: 0; }
+      .tl-item::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 7px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 2px solid var(--muted);
+        transform: translateX(0.5px);
+      }
+      .tl-item.current::before { background: var(--fg); border-color: var(--fg); }
+      .tl-item .title { font-weight: 600; margin: 0; }
+      .tl-item .org { margin: 1px 0 0; }
+      .tl-item .meta { color: var(--muted); font-size: 0.9rem; margin: 3px 0 0; }
+      .tl-item .note { color: var(--muted); font-size: 0.9rem; margin: 5px 0 0; }
       a.inline {
         color: inherit;
         text-decoration: underline;
@@ -125,7 +154,7 @@
         body { padding: 48px 22px 72px; }
         .hero { grid-template-columns: 1fr; gap: 32px; }
         .photo { max-width: 220px; margin: 0 auto; }
-        .cv { grid-template-columns: 1fr; gap: 44px; margin-top: 60px; padding-top: 40px; }
+        .cv { grid-template-columns: 1fr; gap: 28px; margin-top: 60px; padding-top: 40px; }
       }
     </style>
   </head>
@@ -140,10 +169,12 @@
 
           <p class="bio">
             I'm one of the technical leads on the core product at
-            <a class="inline" href="https://www.commonlit.org"><strong>CommonLit</strong></a>, a literacy platform used by
-            <strong>90% of U.S. public schools</strong>. I work closely with
-            designers, product managers, and engineers to ship features that
-            reach millions of students and teachers.
+            <a class="inline" href="https://www.commonlit.org"><strong>CommonLit</strong></a>, a nonprofit whose free
+            English language arts (ELA) platform reaches
+            <strong>90% of U.S. public schools</strong> with a full,
+            Common&nbsp;Core&ndash;aligned reading and writing curriculum. I work
+            closely with designers, product managers, and engineers to ship
+            features used by millions of students and teachers.
           </p>
           <p class="bio">
             I came to software from cognitive science and studio art, and I care
@@ -169,38 +200,45 @@
       </section>
 
       <section class="cv">
-        <div>
-          <h2>Experience</h2>
-
-          <div class="entry">
+        <h2>Experience &amp; Education</h2>
+        <ol class="timeline">
+          <li class="tl-item current">
             <p class="title">Senior Software Engineer</p>
             <p class="org"><a class="inline" href="https://www.commonlit.org">CommonLit</a></p>
-            <p class="meta">2021 – Present</p>
-          </div>
+            <p class="meta">2025 – Present</p>
+          </li>
 
-          <div class="entry">
+          <li class="tl-item">
+            <p class="title">Software Engineer</p>
+            <p class="org">CommonLit</p>
+            <p class="meta">2023 – 2025</p>
+          </li>
+
+          <li class="tl-item">
+            <p class="title">Junior Software Engineer</p>
+            <p class="org">CommonLit</p>
+            <p class="meta">2021 – 2023</p>
+          </li>
+
+          <li class="tl-item">
             <p class="title">Software Engineer</p>
             <p class="org">Agile Onboarding</p>
             <p class="meta">2020 – 2021</p>
-          </div>
-        </div>
+          </li>
 
-        <div>
-          <h2>Education</h2>
+          <li class="tl-item">
+            <p class="title">Software Engineering</p>
+            <p class="org">Flatiron School</p>
+            <p class="meta">2020</p>
+          </li>
 
-          <div class="entry">
+          <li class="tl-item">
             <p class="title">B.A., Cognitive Science</p>
             <p class="org">University of Virginia</p>
             <p class="meta">2014 – 2018</p>
             <p class="note">Minor in Studio Art.</p>
-          </div>
-
-          <div class="entry">
-            <p class="title">Software Engineering</p>
-            <p class="org">Flatiron School</p>
-            <p class="meta">2020</p>
-          </div>
-        </div>
+          </li>
+        </ol>
       </section>
     </main>
   </body>
