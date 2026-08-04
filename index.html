@@ -111,6 +111,15 @@
       .entry .org { margin: 1px 0 0; }
       .entry .meta { color: var(--muted); font-size: 0.9rem; margin: 3px 0 0; }
       .entry .note { color: var(--muted); font-size: 0.9rem; margin: 5px 0 0; }
+      .cv h2.later { margin-top: 44px; }
+      a.inline {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: var(--muted);
+        text-underline-offset: 2px;
+        transition: text-decoration-color 0.15s ease;
+      }
+      a.inline:hover { text-decoration-color: var(--accent); }
 
       @media (max-width: 680px) {
         body { padding: 48px 22px 72px; }
@@ -131,7 +140,7 @@
 
           <p class="bio">
             I'm one of the technical leads on the core product at
-            <strong>CommonLit</strong>, a literacy platform used by
+            <a class="inline" href="https://www.commonlit.org"><strong>CommonLit</strong></a>, a literacy platform used by
             <strong>90% of U.S. public schools</strong>. I work closely with
             designers, product managers, and engineers to ship features that
             reach millions of students and teachers.
@@ -165,7 +174,7 @@
 
           <div class="entry">
             <p class="title">Senior Software Engineer</p>
-            <p class="org">CommonLit</p>
+            <p class="org"><a class="inline" href="https://www.commonlit.org">CommonLit</a></p>
             <p class="meta">2021 – Present</p>
           </div>
 
@@ -173,12 +182,6 @@
             <p class="title">Software Engineer</p>
             <p class="org">Agile Onboarding</p>
             <p class="meta">2020 – 2021</p>
-          </div>
-
-          <div class="entry">
-            <p class="title">Language Assistant</p>
-            <p class="org">Spanish Ministry of Education, Culture &amp; Sport</p>
-            <p class="meta">2018 – 2019 · La Línea de la Concepción, Spain</p>
           </div>
         </div>
 
