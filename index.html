@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lydia Gregory — Senior Software Engineer</title>
     <meta name="description" content="Lydia Gregory is a Senior Software Engineer in Seattle, WA, building education software used by 90% of U.S. public schools." />
+
+    <link rel="canonical" href="https://ljg2gb.github.io/" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b0603a'/%3E%3Ctext x='50%25' y='52%25' dy='.35em' text-anchor='middle' font-family='Georgia,serif' font-size='32' fill='%23f7f4ec'%3ELG%3C/text%3E%3C/svg%3E" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ljg2gb.github.io/" />
+    <meta property="og:title" content="Lydia Gregory — Senior Software Engineer" />
+    <meta property="og:description" content="Senior Software Engineer in Seattle, WA, building education software used by 90% of U.S. public schools." />
+    <meta property="og:image" content="https://ljg2gb.github.io/assets/lydia-bw.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lydia Gregory — Senior Software Engineer" />
+    <meta name="twitter:description" content="Senior Software Engineer in Seattle, WA, building education software used by 90% of U.S. public schools." />
+    <meta name="twitter:image" content="https://ljg2gb.github.io/assets/lydia-bw.jpg" />
     <style>
       :root {
         --bg: #f7f4ec;
@@ -12,7 +26,8 @@
         --muted: #6e675c;
         --line: #e6e0d5;
         --accent: #221e18;
-        --brand: #b0603a;    /* terracotta — golden-hour warmth */
+        --brand: #b0603a;    /* terracotta — golden-hour warmth (decorative accents) */
+        --brand-ink: #964e2c; /* darker terracotta for small text — meets WCAG AA */
         --brand-2: #5f6f7e;  /* slate blue — overcast sky */
       }
       @media (prefers-color-scheme: dark) {
@@ -23,6 +38,7 @@
           --line: #2c2922;
           --accent: #ece7df;
           --brand: #d07d50;
+          --brand-ink: #d98d61;
           --brand-2: #90a4b6;
         }
       }
@@ -84,7 +100,7 @@
       }
       .tags li {
         font-size: 0.82rem;
-        color: var(--brand);
+        color: var(--brand-ink);
         border: 1px solid color-mix(in srgb, var(--brand) 35%, transparent);
         background: color-mix(in srgb, var(--brand) 8%, transparent);
         border-radius: 999px;
@@ -101,7 +117,7 @@
         padding: 9px 16px; font-size: 0.92rem;
         transition: border-color 0.15s ease, transform 0.15s ease;
       }
-      .links a:hover { border-color: var(--brand); color: var(--brand); transform: translateY(-1px); }
+      .links a:hover { border-color: var(--brand); color: var(--brand-ink); transform: translateY(-1px); }
       .links svg { width: 17px; height: 17px; }
 
       /* CV */
@@ -161,13 +177,18 @@
       .misc p { margin: 0 0 16px; }
       .misc p:last-child { margin-bottom: 0; }
       a.inline {
-        color: var(--brand);
+        color: var(--brand-ink);
         text-decoration: underline;
-        text-decoration-color: color-mix(in srgb, var(--brand) 45%, transparent);
+        text-decoration-color: color-mix(in srgb, var(--brand-ink) 45%, transparent);
         text-underline-offset: 2px;
         transition: text-decoration-color 0.15s ease;
       }
-      a.inline:hover { text-decoration-color: var(--brand); }
+      a.inline:hover { text-decoration-color: var(--brand-ink); }
+
+      @media (prefers-reduced-motion: reduce) {
+        * { transition: none !important; }
+        .links a:hover { transform: none; }
+      }
 
       @media (max-width: 680px) {
         body { padding: 48px 22px 72px; }
@@ -273,7 +294,7 @@
       </section>
 
       <section class="cv">
-        <h2>Miscellaneous</h2>
+        <h2>Beyond Work</h2>
         <div class="misc">
           <p>
             I use AI coding assistants daily and get real leverage from them, but
