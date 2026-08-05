@@ -7,19 +7,23 @@
     <meta name="description" content="Lydia Gregory is a Senior Software Engineer in Seattle, WA, building education software used by 90% of U.S. public schools." />
     <style>
       :root {
-        --bg: #f6f5f2;
-        --fg: #16150f;
-        --muted: #6b6862;
-        --line: #dedbd3;
-        --accent: #16150f;
+        --bg: #f7f4ec;
+        --fg: #221e18;
+        --muted: #6e675c;
+        --line: #e6e0d5;
+        --accent: #221e18;
+        --brand: #b0603a;    /* terracotta — golden-hour warmth */
+        --brand-2: #5f6f7e;  /* slate blue — overcast sky */
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --bg: #100f0d;
-          --fg: #ecebe6;
-          --muted: #9a968c;
-          --line: #2a2823;
-          --accent: #ecebe6;
+          --bg: #12100d;
+          --fg: #ece7df;
+          --muted: #9b9384;
+          --line: #2c2922;
+          --accent: #ece7df;
+          --brand: #d07d50;
+          --brand-2: #90a4b6;
         }
       }
       * { box-sizing: border-box; }
@@ -58,7 +62,7 @@
         font-size: 0.78rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: var(--muted);
+        color: var(--brand-2);
         margin: 0 0 14px;
       }
       h1 {
@@ -85,7 +89,7 @@
         padding: 9px 16px; font-size: 0.92rem;
         transition: border-color 0.15s ease, transform 0.15s ease;
       }
-      .links a:hover { border-color: var(--accent); transform: translateY(-1px); }
+      .links a:hover { border-color: var(--brand); color: var(--brand); transform: translateY(-1px); }
       .links svg { width: 17px; height: 17px; }
 
       /* CV */
@@ -102,7 +106,7 @@
         font-size: 0.78rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: var(--muted);
+        color: var(--brand-2);
         font-weight: 600;
         margin: 0;
         padding-top: 4px;
@@ -136,19 +140,19 @@
         border: 2px solid var(--muted);
         transform: translateX(0.5px);
       }
-      .tl-item.current::before { background: var(--fg); border-color: var(--fg); }
+      .tl-item.current::before { background: var(--brand); border-color: var(--brand); }
       .tl-item .title { font-weight: 600; margin: 0; }
       .tl-item .org { margin: 1px 0 0; }
       .tl-item .meta { color: var(--muted); font-size: 0.9rem; margin: 3px 0 0; }
       .tl-item .note { color: var(--muted); font-size: 0.9rem; margin: 5px 0 0; }
       a.inline {
-        color: inherit;
+        color: var(--brand);
         text-decoration: underline;
-        text-decoration-color: var(--muted);
+        text-decoration-color: color-mix(in srgb, var(--brand) 45%, transparent);
         text-underline-offset: 2px;
         transition: text-decoration-color 0.15s ease;
       }
-      a.inline:hover { text-decoration-color: var(--accent); }
+      a.inline:hover { text-decoration-color: var(--brand); }
 
       @media (max-width: 680px) {
         body { padding: 48px 22px 72px; }
