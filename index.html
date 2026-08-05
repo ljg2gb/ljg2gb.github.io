@@ -78,6 +78,18 @@
       .bio strong { font-weight: 600; }
       .bio + .bio { margin-bottom: 30px; }
 
+      .tags {
+        display: flex; flex-wrap: wrap; gap: 8px;
+        list-style: none; padding: 0; margin: 0 0 30px;
+      }
+      .tags li {
+        font-size: 0.82rem;
+        color: var(--brand);
+        border: 1px solid color-mix(in srgb, var(--brand) 35%, transparent);
+        background: color-mix(in srgb, var(--brand) 8%, transparent);
+        border-radius: 999px;
+        padding: 4px 12px;
+      }
       .links {
         display: flex; flex-wrap: wrap; gap: 12px;
         list-style: none; padding: 0; margin: 0;
@@ -145,6 +157,9 @@
       .tl-item .org { margin: 1px 0 0; }
       .tl-item .meta { color: var(--muted); font-size: 0.9rem; margin: 3px 0 0; }
       .tl-item .note { color: var(--muted); font-size: 0.9rem; margin: 5px 0 0; }
+      .misc { max-width: 52ch; }
+      .misc p { margin: 0 0 16px; }
+      .misc p:last-child { margin-bottom: 0; }
       a.inline {
         color: var(--brand);
         text-decoration: underline;
@@ -176,15 +191,27 @@
             <a class="inline" href="https://www.commonlit.org"><strong>CommonLit</strong></a>, a nonprofit whose free
             English language arts (ELA) platform reaches
             <strong>90% of U.S. public schools</strong> with a full,
-            Common&nbsp;Core&ndash;aligned reading and writing curriculum. I work
-            closely with designers, product managers, and engineers to ship
-            features used by millions of students and teachers.
+            Common&nbsp;Core&ndash;aligned curriculum. As the anchor engineer on
+            my team, I set technical direction, help the engineers around me do
+            their best work, and partner with design and product to ship features
+            used by millions of students and teachers.
           </p>
           <p class="bio">
-            I came to software from cognitive science and studio art, and I care
-            about building things that are thoughtful, accessible, and genuinely
-            useful.
+            I came to software from cognitive science and studio art, and that
+            interdisciplinary background still shapes how I work. I'm passionate
+            about art and design, and bring that critical eye to my front-end and
+            design work &mdash; building interfaces that are thoughtful,
+            accessible, and genuinely useful.
           </p>
+
+          <ul class="tags">
+            <li>React</li>
+            <li>React Native</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>Ruby on Rails</li>
+            <li>PostgreSQL</li>
+          </ul>
 
           <ul class="links">
             <li>
@@ -243,6 +270,22 @@
             <p class="note">Minor in Studio Art.</p>
           </li>
         </ol>
+      </section>
+
+      <section class="cv">
+        <h2>Miscellaneous</h2>
+        <div class="misc">
+          <p>
+            I use AI coding assistants daily and get real leverage from them, but
+            treat them as accelerators rather than authorities. Shipping and
+            maintaining production software still takes a developer's judgment
+            about what's correct, maintainable, and safe.
+          </p>
+          <p>
+            Before software, I taught English in southern Spain as a language
+            assistant, and I still speak Spanish. I travel whenever I can.
+          </p>
+        </div>
       </section>
     </main>
   </body>
